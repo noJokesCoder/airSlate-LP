@@ -1,0 +1,161 @@
+@mixin headlineStyle {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: bold;
+  color: #414141;
+}
+
+body {
+  background-color: #2e3dbe;
+}
+label {
+  @include headlineStyle;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.container {
+  width: 92%;
+  margin: 2rem auto;
+}
+.logo {
+  margin: 0 auto;
+  padding: 1rem 0;
+  width: 150px;
+  height: 50px;
+}
+.form {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0px 8px 40px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 24px;
+
+  a {
+    text-decoration: none;
+  }
+
+  &__h1 {
+    font-size: 24px;
+    line-height: 32px;
+  }
+  &__input {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  input {
+    background: #ffffff;
+    height: 32px;
+    border: 1px solid #aaaaaa;
+    box-sizing: border-box;
+    border-radius: 4px;
+  }
+  &__p {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    color: #565656;
+  }
+  &__button-email {
+    width: 100%;
+    background: #ff9000;
+    border: none;
+    border-radius: 4px;
+    height: 40px;
+    padding: 12px;
+    color: #ffffff;
+  }
+  &__suggest {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      display: block;
+      flex-basis: 25%;
+    }
+    p {
+      flex-basis: 50%;
+      font-size: 14px;
+    }
+  }
+  &__login-options {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3%;
+
+    .button {
+      width: 30%;
+      height: 40px;
+      padding: 8px;
+      flex-basis: 100%;
+      font-size: 14px;
+      line-height: 24px;
+      text-align: center;
+      color: #414141;
+      background: #ffffff;
+      border: 1px solid #aaaaaa;
+      box-sizing: border-box;
+      border-radius: 4px;
+
+      &__span {
+        display: none;
+      }
+    }
+  }
+}
+@media screen and (min-width: 768px) {
+  body {
+    background-color: #2e3dbe;
+  }
+  .logo {
+    margin: 48px auto 60px auto;
+  }
+  .container {
+    max-width: 552px;
+    margin: 0 auto;
+  }
+  .form {
+    padding: 48px;
+
+    &__button-email {
+      cursor: pointer;
+    }
+
+    &__suggest {
+      flex-direction: row;
+      justify-content: space-evenly;
+      gap: 8px;
+
+      p {
+        padding: 4px;
+        width: 260px;
+      }
+    }
+  }
+  .button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 1s;
+  }
+  .button:hover {
+    background-color: #ff9000;
+    cursor: pointer;
+  }
+  .button__span {
+    display: inline-block !important;
+    padding: 8px;
+  }
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.scss" />
+    <script defer src="./script.js"></script>
+
+    <title>airSlate</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="logo">
+        <img src="./image/airSlate-mono.png" alt="" />
+      </div>
+      <form id="form" class="form" autocomplete="off" novalidate>
+        <h1 class="form__h1">Log in to airSlate</h1>
+        <div class="form__input">
+          <label for="email">Email address</label>
+          <input type="email" name="LoginEmail" id="email"
+          placeholder="name@email.com" required="required" pattern="
+          minlength="5" />
+        </div>
+        <div class="form__input">
+          <label for="password">Password</label>
+          <input
+            type="password"
+            name="LoginPassword"
+            id="password"
+            placeholder="Enter password"
+            required="required"
+          />
+        </div>
+        <div class="form__p">
+          <p>
+            By clicking Log in, you agree to the
+            <a href="#">Terms of Services</a> and
+            <a href="#">Privacy Policy</a>, including receipt of emails from of
+            us about our service.
+          </p>
+        </div>
+        <button id="logIn" class="form__button-email" type="submit">
+          Log in
+        </button>
+        <div class="form__suggest">
+          <img src="./image/Divider.png" alt="" />
+          <p>or continue with your social accounts</p>
+          <img src="./image/Divider.png" alt="" />
+        </div>
+        <div class="form__login-options">
+          <button class="button">
+            <img src="./image/Facebook-login.png" alt="Login with Facebook" />
+            <span class="button__span">Facebook</span>
+          </button>
+          <button class="button">
+            <img src="./image/Google-login.png" alt="Login with Google" />
+            <span class="button__span">Google</span>
+          </button>
+          <button class="button">
+            <img src="./image/Apple-login.png" alt="Login with Apple id" />
+            <span class="button__span">Apple</span>
+          </button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
